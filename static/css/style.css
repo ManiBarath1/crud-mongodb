@@ -1,0 +1,71 @@
+body {
+    color: white;
+    background-color:#a59f9f;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(54, 233, 54);
+    padding: 8px 17px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.all {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center ;
+    margin-top: 75px;
+}
+
+.one {
+    background-color:#1f2f43;
+    padding: 40px;
+    
+}
+
+.two {
+    background-color:#1f2f43;
+    padding: 40px;
+}
+
+table tr {
+    border-bottom: 1px solid rgb(172, 165, 165);
+    padding: 5px 13px;
+}
+
+table tr td {
+    border-bottom: 1px solid black;
+    padding: 15px 5px;
+}
+
+table th {
+    padding: 15px 5px;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    box-shadow: 2px -3px 28px grey;
+    /* margin-left: 10px; */
+}
+
+table tr .edit a {
+    text-decoration: none;
+    color: white;
+    background-color: #109cd5;
+    padding: 5px 13px;
+    font-size: 19px;
+    border-radius: 10px;
+}
+
+table tr .delete a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(241, 10, 10);
+    padding: 5px 13px;
+    font-size: 19px;
+    border-radius: 10px;
+
+}

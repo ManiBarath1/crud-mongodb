@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    
+     <center><h1>CRUD Operations Using MongoDB</h1></center>
+    <div class="all">
+        <div class="one">
+        <h1>Item</h1>
+        <a href="{{url_for('add_item')}}">Add Item</a>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {%for i in I%}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{i.IName}}</td>
+                <td>{{i.Quantity}}</td>
+                <td>{{i.Price}}</td>
+                <td>{{i.Total}}</td>
+                <td class="edit" ><a href="{{url_for('iupdate',iname=i.IName)}}">Update</a></td>
+                <td class="delete"><a href="{{url_for('idelete',iname=i.IName)}}">Delete</a></td>
+            
+            </tr>
+            {%endfor%}
+        </table>
+        </div>
+      <div class="two">
+        <h1>User</h1>
+        <a href="{{url_for('add_user')}}">Add User</a>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>User Name</th>
+                <th>Mobile</th>
+                <th>Location</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {%for i in U%}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{i.UName}}</td>
+                <td>{{i.Mobile}}</td>
+                <td>{{i.Loc}}</td>
+                <td class="edit"><a href="{{url_for('uupdate',uname=i.UName)}}">Update</a></td>
+                <td class="delete"><a href="{{url_for('udelete',uname=i.UName)}}">Delete</a></td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+    </div>
+</body>
+</html>
